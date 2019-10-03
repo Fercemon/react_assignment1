@@ -1,15 +1,21 @@
 import React, {Component} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { createAppContainer } from 'react-navigation';
+import { createBottomTabNavigator} from 'react-navigation-tabs';
 
-export default class App extends Component {
-  render(){
-    return (
-      <View style={styles.container}>
-        <Text>Hello man</Text>
-      </View>
-    );
-  }
-}
+import HomeScreen from './screens/Home';
+import LoginScreen from './screens/Login';
+import SettingsScreen from './screens/Settings';
+
+
+const tabNavigator = createBottomTabNavigator({
+  Login: LoginScreen,
+  Home: HomeScreen,
+  Settings: SettingsScreen
+}) 
+
+
+export default createAppContainer(tabNavigator)
 
 const styles = StyleSheet.create({
   container: {
