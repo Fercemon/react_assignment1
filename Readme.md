@@ -29,14 +29,14 @@ Remember to import the package on each page you need it.
 
 - App.js
 - screens
-  . Exercices
-    1 index.js
-    2 Home.js
-    3 Abbs.js
-    4 Back.js
-  . Plans
-    1 index.js
-    2 MonthsBodybuilding3.js
+  - Exercices
+    - index.js
+    - Home.js
+    - Abbs.js
+    - Back.js
+  - Plans
+    - index.js
+    - MonthsBodybuilding3.js
 - assets(images here)
 
 # About this app
