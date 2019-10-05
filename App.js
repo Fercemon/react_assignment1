@@ -1,24 +1,35 @@
-import React, {Component} from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+// Import the components we need from the package
+import { StyleSheet, Text, View, } from 'react-native';
 import { createAppContainer } from 'react-navigation';
 import { createBottomTabNavigator} from 'react-navigation-tabs';
+import HomeScreen from './screens/Exercices';
+import PlanScreen from './screens/Plans';
 
-import HomeScreen from './screens/Home';
-import LoginScreen from './screens/Login';
-import SettingsScreen from './screens/Settings';
-
-
+// create a variable to store the function createBottomTabNavigator
 const tabNavigator = createBottomTabNavigator({
-  Login: LoginScreen,
-  Home: HomeScreen,
-  Settings: SettingsScreen
-}) 
+  Exercices: HomeScreen,
+  Plans: PlanScreen
+},
+{
+  //to add styles to the tabNavigator
+  tabBarOptions: {
+    activeTintColor: 'orange', 
+    inactiveTintColor: 'gray',
+    labelStyle: {
+      fontSize: 20,
+      paddingTop: 0
+    }
+  }
+}
+);
 
 
-export default createAppContainer(tabNavigator)
+// we use createAppContainer as our app's route component
+// the createAppContainer is a function that return a component.
+export default createAppContainer(tabNavigator)// using tabNavigator as a parameter, we include its components inside the app component
 
 const styles = StyleSheet.create({
-  container: {
+  nav: {
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
