@@ -25,6 +25,20 @@ And then we have to import the component we want to use typing: import component
 
 Remember to import the package on each page you need it.
 
+# App structure
+
+- App.js
+- screens
+  . Exercices
+    1 index.js
+    2 Home.js
+    3 Abbs.js
+    4 Back.js
+  . Plans
+    1 index.js
+    2 MonthsBodybuilding3.js
+- assets(images here)
+
 # About this app
 
 This is an app for workouts.
